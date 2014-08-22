@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# Usage:
+# interpush /path/to/find/translations [files_to_include [files_to_exclude]]
+# - files_to_include is optional, and by default {app,lib}/**/*.{rb,erb,haml}
+# - files_to_exclude is optional, and by default nil
+
+require 'interpres'
+
+args = [ARGV[0], ARGV[1], ARGV[2]]
+
+Interpres::Push.run(*args.compact)

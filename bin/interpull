@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# Usage:
+# interpull /path/to/leave/files
+
+require 'interpres'
+
+Interpres::Pull.run(ARGV[0])
